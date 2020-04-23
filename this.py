@@ -1,3 +1,4 @@
+from IPython.display import display
 from PIL import Image, ImageDraw
 import urllib.request
 import io
@@ -16,4 +17,4 @@ draw = ImageDraw.Draw(img)
 for i in parse_data["annotation"]:
     for j in i["points"]:
         draw.point((j[0], j[1]), 'red')
-img.show()
+display(img)
